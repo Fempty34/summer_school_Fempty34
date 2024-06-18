@@ -54,19 +54,28 @@
 
 #### Вопросы
 1. Проверьте содержимое первого HTTP-запроса GET. Видите ли вы строку «IF-MODIFIED-SINCE» в HTTP GET?
-   - <!-- todo -->
+   - No
 2. Проверьте содержимое ответа сервера. Вернул ли сервер содержимое файла явно? Как вы
    это можете увидеть?
-   - <!-- todo -->
-   - <!-- todo -->
+   - HTTP/1.1 200 OK
+   - 
+      <html>
+      
+      Congratulations again!  Now you've downloaded the file lab2-2.html. <br>
+      This file's last modification date will not change.  <p>
+      Thus  if you download this multiple times on your browser, a complete copy <br>
+      will only be sent once by the server due to the inclusion of the IN-MODIFIED-SINCE<br>
+      field in your browser's HTTP GET request to the server.
+
+</html>
 3. Теперь проверьте содержимое второго HTTP-запроса GET (из вашего браузера на сторону
    сервера). Видите ли вы строку «IF-MODIFIED-SINCE» в HTTP GET? Если да, то какая
    информация следует за заголовком «IF-MODIFIED-SINCE»?
-   - <!-- todo -->
+   - Tue, 18 Jun 2024 05:59:02 GMT
 4. Какой код состояния HTTP и фраза возвращаются сервером в ответ на этот второй запрос
    HTTP GET? Вернул ли сервер явно содержимое файла?
-   - <!-- todo -->
-   - <!-- todo -->
+   - 304 Not Modified
+
 
 ## Задание 3. Получение длинных документов (2 балла)
 
